@@ -13,18 +13,19 @@ public class Jtelepactrf {
     /**
      * Telepac en Json
      */
-    private JsonObject telepac;
+    private final JsonObject telepac;
 
     /**
      * Règles
      */
-    private List<Rule> rules;
+    private final List<Rule> rules;
 
     public Jtelepactrf(JsonObject telepac, List<Rule> rules) {
         this.telepac = telepac;
         this.rules = rules;
     }
 
-    public void tranform() {
+    public JsonObject transform() {
+        return telepac;
     }
 }
