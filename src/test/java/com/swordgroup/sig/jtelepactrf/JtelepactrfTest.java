@@ -34,7 +34,7 @@ public class JtelepactrfTest {
     @Test
     public void testTransformation() throws IOException {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("telepac_1_2017.shp").getFile());
+        File file = new File(classLoader.getResource("telepac_1_2018.shp").getFile());
         FeatureCollection featureCollection = ShapeUtils.shape2features(file);
         String featureJson = multiPolyToPolyJson(new FeatureJSON().toString(featureCollection));
         System.out.println(featureJson);
